@@ -1,0 +1,157 @@
+:root {
+    --primary: #5a5a5a;
+    --secondary: #4a4a4a;
+    --hover: #575757;
+    --highlight: #00eaff;
+  }
+  
+  body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #f0f2f5;
+    display: flex;
+    height: 100vh;
+    overflow: hidden;
+  }
+  
+  .sidebar {
+    width: 260px;
+    height: 100vh;
+    background: #3c3c3c;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: width 0.3s ease;
+    position: relative;
+    z-index: 10;
+  }
+  
+  .sidebar.collapsed {
+    width: 70px;
+  }
+  
+  .logo {
+    font-size: 26px;
+    text-align: center;
+    padding: 20px 0;
+    background-color: #1e1e1e;
+    font-weight: bold;
+  }
+  
+  .menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .menu li {
+    position: relative;
+  }
+  
+  .menu a {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    color: white;
+    padding: 14px 20px;
+    transition: background 0.3s;
+  }
+  
+  .menu a:hover {
+    background-color: var(--hover);
+  }
+  
+  .menu .active {
+    background-color: var(--primary);
+    font-weight: bold;
+  }
+  
+  .submenu {
+    list-style: none;
+    padding-left: 30px;
+    margin: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease;
+  }
+  
+  .submenu.show {
+    max-height: 500px;
+  }
+  
+  .submenu li a {
+    background-color: var(--secondary);
+    font-size: 14px;
+    color: #ccc;
+    padding: 10px;
+  }
+  
+  .submenu li a.sub-active {
+    color: var(--highlight);
+  }
+  
+  .arrow {
+    margin-left: auto;
+    transition: transform 0.3s ease;
+  }
+  
+  .toggle.open .arrow {
+    transform: rotate(90deg);
+  }
+  
+  .footer {
+    background: #222;
+    text-align: center;
+    padding: 15px 0;
+  }
+  
+  .empresa-logo {
+    font-family: 'Brush Script MT', cursive;
+    font-size: 22px;
+    color: #ff00ff;
+  }
+  
+  .empresa-nombre {
+    font-size: 12px;
+    color: #bbb;
+  }
+  
+  .toggle-btn {
+    display: none;
+    position: absolute;
+    top: 10px;
+    right: -45px;
+    background: #3c3c3c;
+    border: none;
+    color: white;
+    padding: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 20;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+  }
+  
+  .main-content {
+    flex: 1;
+    padding: 20px;
+    overflow-y: auto;
+  }
+  
+  /* RESPONSIVE */
+  @media (max-width: 768px) {
+    .sidebar {
+      position: absolute;
+      left: 0;
+      transform: translateX(-100%);
+    }
+  
+    .sidebar.open {
+      transform: translateX(0);
+    }
+  
+    .toggle-btn {
+      display: block;
+    }
+  }  

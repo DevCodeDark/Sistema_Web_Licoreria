@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Barra Lateral</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lucide@latest/dist/umd/lucide.min.css">
+  <link rel="stylesheet" href="../static/css/barra.css" />
+</head>
+<body>
+  <aside class="sidebar" id="sidebar">
+    <div class="logo">SipSoft</div>
+    <nav>
+      <ul class="menu">
+        <li><a href="#" class="link"><i data-lucide="home"></i><span>Inicio</span></a></li>
+
+        <li>
+          <a href="#" class="toggle"><i data-lucide="bar-chart-3"></i><span>Ventas</span><i class="arrow" data-lucide="chevron-right"></i></a>
+          <ul class="submenu">
+            <li><a href="#">Pedidos</a></li>
+            <li><a href="#">Caja</a></li>
+          </ul>
+        </li>
+
+        <li>
+          <a href="#" class="toggle"><i data-lucide="shopping-cart"></i><span>Compras</span><i class="arrow" data-lucide="chevron-right"></i></a>
+          <ul class="submenu">
+            <li><a href="#">Proveedores</a></li>
+            <li><a href="#">Contratos</a></li>
+            <li><a href="#">Devoluciones</a></li>
+            <li><a href="#">Compras</a></li>
+          </ul>
+        </li>
+
+        <li>
+          <a href="#" class="toggle active"><i data-lucide="warehouse"></i><span>Almacén</span><i class="arrow" data-lucide="chevron-right"></i></a>
+          <ul class="submenu show">
+            <li><a href="#" class="sub-active">Inventario</a></li>
+            <li><a href="#">Envíos</a></li>
+          </ul>
+        </li>
+
+        <li>
+          <a href="#" class="toggle"><i data-lucide="file-text"></i><span>Reportes</span><i class="arrow" data-lucide="chevron-right"></i></a>
+          <ul class="submenu">
+            <li><a href="#">Compras</a></li>
+            <li><a href="#">Ventas</a></li>
+            <li><a href="#">Devoluciones</a></li>
+            <li><a href="#">Inventario</a></li>
+            <li><a href="#">Proveedores</a></li>
+            <li><a href="#">Contrato proveedores</a></li>
+            <li><a href="#">Finanzas</a></li>
+          </ul>
+        </li>
+
+        <li><a href="#" class="link"><i data-lucide="shield"></i><span>Seguridad</span></a></li>
+      </ul>
+    </nav>
+    <div class="footer">
+      <div class="empresa-logo">Ibiza</div>
+      <div class="empresa-nombre">Empresa</div>
+    </div>
+    <button class="toggle-btn" id="toggleSidebar"><i data-lucide="menu"></i></button>
+  </aside>
+
+  <main class="main-content">
+    <!-- Aquí va tu contenido principal -->
+  </main>
+
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script src="../static/js/barra.js"></script>
+</body>
+</html>
