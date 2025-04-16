@@ -9,5 +9,5 @@ public class LicApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(LicApplication.class, args);
 	}
-
+ 
 }
