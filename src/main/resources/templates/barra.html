@@ -1,74 +1,123 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Barra Lateral</title>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lucide@latest/dist/umd/lucide.min.css">
-  <link rel="stylesheet" href="../static/css/barra.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SipSoft</title>
+    <link rel="stylesheet" href="../static/css/barra.css">
 </head>
 <body>
-  <aside class="sidebar" id="sidebar">
-    <div class="logo">SipSoft</div>
-    <nav>
-      <ul class="menu">
-        <li><a href="#" class="link"><i data-lucide="home"></i><span>Inicio</span></a></li>
-
-        <li>
-          <a href="#" class="toggle"><i data-lucide="bar-chart-3"></i><span>Ventas</span><i class="arrow" data-lucide="chevron-right"></i></a>
-          <ul class="submenu">
-            <li><a href="#">Pedidos</a></li>
-            <li><a href="#">Caja</a></li>
-          </ul>
-        </li>
-
-        <li>
-          <a href="#" class="toggle"><i data-lucide="shopping-cart"></i><span>Compras</span><i class="arrow" data-lucide="chevron-right"></i></a>
-          <ul class="submenu">
-            <li><a href="#">Proveedores</a></li>
-            <li><a href="#">Contratos</a></li>
-            <li><a href="#">Devoluciones</a></li>
-            <li><a href="#">Compras</a></li>
-          </ul>
-        </li>
-
-        <li>
-          <a href="#" class="toggle active"><i data-lucide="warehouse"></i><span>Almacén</span><i class="arrow" data-lucide="chevron-right"></i></a>
-          <ul class="submenu show">
-            <li><a href="#" class="sub-active">Inventario</a></li>
-            <li><a href="#">Envíosssssssssssssss</a></li>
-          </ul>
-        </li>
-
-        <li>
-          <a href="#" class="toggle"><i data-lucide="file-text"></i><span>Reportes</span><i class="arrow" data-lucide="chevron-right"></i></a>
-          <ul class="submenu">
-            <li><a href="#">Compras</a></li>
-            <li><a href="#">Ventas</a></li>
-            <li><a href="#">Devoluciones</a></li>
-            <li><a href="#">Inventario</a></li>
-            <li><a href="#">Proveedores</a></li>
-            <li><a href="#">Contrato proveedores</a></li>
-            <li><a href="#">Finanzas</a></li>
-          </ul>
-        </li>
-
-        <li><a href="#" class="link"><i data-lucide="shield"></i><span>Seguridad</span></a></li>
-      </ul>
-    </nav>
-    <div class="footer">
-      <div class="empresa-logo">Ibiza</div>
-      <div class="empresa-nombre">Empresa</div>
+    <div class="menu">
+        <ion-icon name="menu-outline"></ion-icon>
+        <ion-icon name="close-outline"></ion-icon>
     </div>
-    <button class="toggle-btn" id="toggleSidebar"><i data-lucide="menu"></i></button>
-  </aside>
-
-  <main class="main-content">
-    <!-- Aquí va tu contenido principal -->
-     <h1>No te creo nada renato</h1>
-  </main>
-
-  <script src="https://unpkg.com/lucide@latest"></script>
-  <script src="../static/js/barra.js"></script>
+    <div class="barra-lateral">
+        <div>
+            <div class="nombre-pagina">
+                <ion-icon id="glass" name="wine-outline"></ion-icon>
+                <span>SipSoft</span>
+            </div>
+            <button class="boton">
+                <ion-icon name="add-outline"></ion-icon>
+                <span>Create new</span>
+            </button>
+        </div>
+        <nav class="navegacion">
+            <ul class="main-nav">
+                <li class="menu-item menu-item-dropdown">
+                    <a href="#">
+                        <ion-icon name="lock-closed-outline"></ion-icon>
+                        <span>Seguridad</span>
+                        <ion-icon class="dropdown-icon" name="chevron-down-outline"></ion-icon>
+                    </a>
+                    <ul class="sub-menu">
+                        <li><a href="#" class="sub-menu-link">Usuarios</a></li>
+                        <li><a href="#" class="sub-menu-link">Roles</a></li>
+                    </ul>
+                </li>
+                <li class="menu-item menu-item-dropdown">
+                    <a href="#">
+                        <ion-icon name="cash-outline"></ion-icon>
+                        <span>Ventas</span>
+                        <ion-icon class="dropdown-icon" name="chevron-down-outline"></ion-icon>
+                    </a>
+                    <ul class="sub-menu">
+                        <li><a href="#" class="sub-menu-link">Pedidos</a></li>
+                        <li><a href="#" class="sub-menu-link">Caja</a></li>
+                    </ul>
+                </li>
+                <li class="menu-item menu-item-dropdown">
+                    <a href="#">
+                        <ion-icon name="wallet-outline"></ion-icon>
+                        <span>Compras</span>
+                        <ion-icon class="dropdown-icon" name="chevron-down-outline"></ion-icon>
+                    </a>
+                    <ul class="sub-menu">
+                        <li><a href="#" class="sub-menu-link">Proveedores</a></li>
+                        <li><a href="#" class="sub-menu-link">Contratos</a></li>
+                        <li><a href="#" class="sub-menu-link">Devoluciones</a></li>
+                        <li><a href="#" class="sub-menu-link">Compras</a></li>
+                    </ul>
+                </li>
+                <li class="menu-item menu-item-dropdown">
+                    <a href="#">
+                        <ion-icon name="storefront-outline"></ion-icon>
+                        <span>Almacén</span>
+                        <ion-icon class="dropdown-icon" name="chevron-down-outline"></ion-icon>
+                    </a>
+                    <ul class="sub-menu">
+                        <li><a href="#" class="sub-menu-link">Inventario</a></li>
+                        <li><a href="#" class="sub-menu-link">Envíos</a></li>
+                    </ul>
+                </li>
+                <li class="menu-item menu-item-dropdown">
+                    <a href="#">
+                        <ion-icon name="document-lock-outline"></ion-icon>
+                        <span>Reportes</span>
+                        <ion-icon class="dropdown-icon" name="chevron-down-outline"></ion-icon>
+                    </a>
+                    <ul class="sub-menu">
+                        <li><a href="#" class="sub-menu-link">Compras</a></li>
+                        <li><a href="#" class="sub-menu-link">Ventas</a></li>
+                        <li><a href="#" class="sub-menu-link">Devoluciones</a></li>
+                        <li><a href="#" class="sub-menu-link">Inventario</a></li>
+                        <li><a href="#" class="sub-menu-link">Proveedores</a></li>
+                        <li><a href="#" class="sub-menu-link">Contrato Proveedores</a></li>
+                        <li><a href="#" class="sub-menu-link">Finanzas</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+        <div>
+            <div class="linea"></div>
+            <div class="modo-oscuro">
+                <div class="info">
+                    <ion-icon name="moon-outline"></ion-icon>
+                    <span>Dark Mode</span>
+                </div>
+                <div class="switch">
+                    <div class="base">
+                        <div class="circulo"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="usuario">
+                <img src="../templates/Logo Ibiza.jpg" alt="">
+                <div class="info-usuario">
+                    <div class="nombre-email">
+                        <span class="nombre">Empresa Ibiza</span>
+                        <span class="email">ibizaempresa@gmail.com</span>
+                    </div>
+                    <ion-icon name="ellipsis-vertical-outline"></ion-icon>
+                </div>
+            </div>
+        </div>
+    </div>
+    <main>
+        <p></p>
+    </main>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script src="../static/js/barra.js"></script>
 </body>
 </html>
