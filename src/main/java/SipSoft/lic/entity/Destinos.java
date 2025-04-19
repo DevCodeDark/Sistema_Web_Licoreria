@@ -1,6 +1,5 @@
 package SipSoft.lic.entity;
 
-<<<<<<< HEAD
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -49,8 +48,4 @@ public class Destinos {
         return "Destinos [idDestino=" + idDestino + ", codUbigeo=" + codUbigeo + ", direccion=" + direccion
                 + ", referencia=" + referencia + "]";
     }
-=======
-public class Destinos {
-    
->>>>>>> 0d134b1f38c4c52337fa8f0ee8dec9c40afec9d9
 }
