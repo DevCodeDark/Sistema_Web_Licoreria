@@ -25,8 +25,15 @@ public class Cajas {
     @Column(length = 20)
     private String numCaja;
     private Integer estado = 1;
+<<<<<<< HEAD:src/main/java/SipSoft/lic/entity/Cajas.java
     private Integer idUsuario;
     
+=======
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "idUsuario", nullable = false)
+    private Usuarios usuario;
+
+>>>>>>> 0d134b1f38c4c52337fa8f0ee8dec9c40afec9d9:src/main/java/SipSoft/lic/entity/Caja.java
     public Integer getIdCaja() {
         return idCaja;
     }
@@ -69,11 +76,19 @@ public class Cajas {
     public void setEstado(Integer estado) {
         this.estado = estado;
     }
+<<<<<<< HEAD:src/main/java/SipSoft/lic/entity/Cajas.java
     public Integer getIdUsuario() {
         return idUsuario;
     }
     public void setIdUsuario(Integer idUsuario) {
         this.idUsuario = idUsuario;
+=======
+    public Usuarios getUsuario() {
+        return usuario;
+    }
+    public void setUsuario(Usuarios usuario) {
+        this.usuario = usuario;
+>>>>>>> 0d134b1f38c4c52337fa8f0ee8dec9c40afec9d9:src/main/java/SipSoft/lic/entity/Caja.java
     }
     @Override
     public String toString() {
