@@ -2,8 +2,8 @@ HELP.md
 target/
 !.mvn/wrapper/maven-wrapper.jar
 
-# ── Configuración de Spring Boot que NO debe subirse ─────────────
-**/src/main/**/application.properties
+# Ignorar todos los application.properties en cualquier carpeta
+**/application.properties
 
 ### STS ###
 .apt_generated
