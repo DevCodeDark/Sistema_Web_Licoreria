@@ -30,7 +30,7 @@ public class Caja {
     private Integer estado = 1;
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "idUsuario", nullable = false)
-    private Usuario usuario;
+    private Usuarios usuario;
 
     public Integer getIdCaja() {
         return idCaja;
@@ -74,10 +74,10 @@ public class Caja {
     public void setEstado(Integer estado) {
         this.estado = estado;
     }
-    public Usuario getUsuario() {
+    public Usuarios getUsuario() {
         return usuario;
     }
-    public void setUsuario(Usuario usuario) {
+    public void setUsuario(Usuarios usuario) {
         this.usuario = usuario;
     }
     @Override
